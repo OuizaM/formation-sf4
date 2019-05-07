@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+
+{% block body1 %}
+
+
+
+
+            <h1>Available cars </h1>
+
+            {%  for car in cars %}
+                <li><h3><a href="{{ path('show', {'id': car.id}) }}"> {{ car.model}} </a> <a href="{{ path('editt', {'id': car.id}) }}" > <h6><button class="btn-large waves-effect waves-light orange darken-3" type="submit" name="action">Edit</button></h6></a> <a href="{{ path('delete', {'id': car.id}) }}" ><h6><button class="btn-large waves-effect waves-light orange darken-3" type="submit" name="action">delete</button></h6> </a></h3></li>
+            {% endfor %}
+
+{% endblock %}

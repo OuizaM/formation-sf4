@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+{% block body3 %}
+
+    <h1>Your car : {{ car.id }}</h1>
+    <h3>Model : {{ car.model }}</h3>
+    <h3>Price : {{ car.price }}</h3>
+
+
+
+
+  {#  {% if car.image.name is defined %}
+    <img src="{{ asset('images/')-car.image.name }}">
+    {% else  %}
+    <p>pas d'images </p>
+    {% endif %}#}
+
+
+
+    <a href="{{ path('blog') }}"> Home </a>
+
+{% endblock %}

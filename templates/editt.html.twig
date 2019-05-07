@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+
+{% block body4 %}
+
+    <h1>Edit your car : {{ car.model }} </h1>
+
+    {{ form_start(form, {'attr':{'novalidate':'novalidate'}})  }}
+
+    {{ form_label(form.model,'Model:',{label_attr:{'class':'form_model'}}) }}
+    {{ form_widget(form.model) }}
+    {{ form_errors(form.model) }}
+
+    {{ form_label(form.price) }}
+    {{ form_widget(form.price) }}
+
+
+
+    <button class="btn waves-effect waves-light" type="submit" name="action">Edit
+
+    </button>
+
+
+    {{ form_end(form)  }}
+
+{% endblock %}
